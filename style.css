@@ -1,0 +1,215 @@
+@import url(https://fonts.google.com/specimen/Space+Mono);
+
+:root {
+  /* Colors */
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-grayish-cyan-1: hsl(183, 100%, 15%);
+  --very-grayish-cyan-2: hsl(182, 50%, 31%);
+  --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(186, 14%, 56%);
+  --light-grayish-cyan-1: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --input-size: 24px;
+  /* Weights */
+  --normal: 400;
+  --moderate: 500;
+  --bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background: var(--light-grayish-cyan-1);
+}
+.heading {
+  color: var(--very-grayish-cyan-1);
+  text-transform: uppercase;
+  font-weight: var(--moderate);
+  letter-spacing: 3px;
+  text-align: center;
+}
+.card {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-body {
+  background: var(--white);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.bill-input {
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 15px;
+}
+.people-input {
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 15px;
+}
+.inputs {
+  background-color: var(--light-grayish-cyan-2);
+  color: var(--very-grayish-cyan-1);
+  padding: 0.4rem;
+  text-align: right;
+  width: 300px;
+  height: 2.5rem;
+  font-weight: var(--moderate);
+  border-radius: 0.4rem;
+  border: none;
+  font-size: var(--input-size);
+  cursor: pointer;
+}
+.inputs:focus {
+  border: 2px solid var(--strong-cyan);
+  outline-style: none;
+}
+.result {
+  background: var(--very-grayish-cyan-1);
+  color: var(--white);
+  border-radius: 1rem;
+}
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+.tips {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 1rem 2rem;
+}
+.tip__values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 40px;
+  margin-top: 1rem;
+}
+.tip {
+  width: 5.5rem;
+  height: 2rem;
+  background: var(--very-grayish-cyan-1);
+  color: var(--white);
+  font-weight: var(--bold);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+.tip:hover {
+  background: var(--strong-cyan);
+  color: var(--very-grayish-cyan-1);
+}
+.custom {
+  width: 5.5rem;
+  padding: 0.3rem;
+  height: 2rem;
+  background: var(--light-grayish-cyan-2);
+  border: 1px solid var(--strong-cyan);
+  border-radius: 0.3rem;
+  text-align: right;
+  color: var(--very-grayish-cyan-1);
+  font-weight: var(--bold);
+  font-size: 20px;
+  cursor: pointer;
+}
+.custom:focus {
+  border: 1px solid var(--strong-cyan);
+  outline-style: none;
+}
+
+.reset {
+  background: var(--very-grayish-cyan-2);
+  color: var(--very-grayish-cyan-1);
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  width: 250px;
+  height: 2rem;
+  border-radius: 0.3rem;
+  margin: 2rem;
+  font-weight: var(--bold);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+.reset:hover {
+  background: var(--strong-cyan);
+}
+.tip__ammount {
+  font-size: 35px;
+  font-weight: var(--bold);
+  color: var(--strong-cyan);
+}
+.sub-heading {
+  font-size: 15px;
+  color: var(--very-grayish-cyan-1);
+  font-weight: var(--normal);
+}
+.tips:first-child {
+  margin-top: 2rem;
+}
+.person {
+  color: var(--dark-grayish-cyan-1);
+  margin-top: 0.2rem;
+}
+.bill_heading {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  padding: 0 1rem;
+  color: red;
+}
+.input_error {
+  border: 2px solid red;
+}
+@media screen and (max-width: 700px) {
+  .card {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tip {
+    width: 9rem;
+    height: 3rem;
+  }
+  .tip__values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 60px;
+    place-items: center;
+  }
+  .custom {
+    width: 9rem;
+    height: 3rem;
+  }
+  .sub-heading {
+    margin-top: 1rem;
+  }
+}
