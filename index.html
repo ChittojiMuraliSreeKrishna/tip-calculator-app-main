@@ -12,8 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./style.css" />
-
-    <title>Frontend Mentor | Calculator app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -27,12 +26,88 @@
     </style>
   </head>
   <body>
+    <div class="card">
+      <div class="card-header">
+        <h1 class="heading">spli<br />tter</h1>
+      </div>
+      <div class="card-body">
+        <div class="counter">
+          <div class="bill_section">
+            <div class="bill_heading">
+              <p class="sub-heading">Bill</p>
+              <i id="error" class="error"></i>
+            </div>
+            <input
+              class="bill-input inputs"
+              id="bill"
+              type="number"
+              placeholder="0"
+            />
+          </div>
+          <div class="tip__buttons">
+            <p class="sub-heading">Select Tip %</p>
+            <div class="tip__values">
+              <button class="tip" id="tipBtn" onclick="tipsCalc(5)">5%</button>
+              <button class="tip" id="tipBtn" onclick="tipsCalc(10)">
+                10%
+              </button>
+              <button class="tip" id="tipBtn" onclick="tipsCalc(15)">
+                15%
+              </button>
+              <button class="tip" id="tipBtn" onclick="tipsCalc(25)">
+                25%
+              </button>
+              <button class="tip" id="tipBtn" onclick="tipsCalc(50)">
+                50%
+              </button>
+              <input
+                type="number"
+                name="customtip"
+                class="custom"
+                placeholder="Custom"
+                id="customTip"
+                onChange="customTips()"
+              />
+            </div>
+          </div>
+          <div class="no_people_section">
+            <div class="bill_heading">
+              <p class="sub-heading">Number of People</p>
+              <i id="error" class="error"></i>
+            </div>
+            <input
+              class="people-input inputs"
+              placeholder="0"
+              id="people"
+              type="number"
+            />
+          </div>
+        </div>
+        <div class="result">
+          <div class="tips">
+            <div class="tip__heading">
+              <b> Tip Amount </b>
+              <p class="person">/ person</p>
+            </div>
+            <div class="tip__ammount">$<span id="tip_value">0.00</span></div>
+          </div>
+          <div class="tips">
+            <div class="tip__heading">
+              <b>Total </b>
+              <p class="person">/ person</p>
+            </div>
+            <div class="tip__ammount">$<span id="total_value">0.00</span></div>
+          </div>
+          <button class="reset" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Chittoji Murali Sree Krishna</a>.
+      <script src="./script.js"></script>
     </div>
   </body>
 </html>
-
